@@ -1,5 +1,5 @@
-import model from "./model.js";
-import searchView from "./views/searchView.js";
+import model from './model.js';
+import searchView from './views/searchView.js';
 /*const list = document.querySelector(".item-cards");
 
 // Ladet alle datensätze in karten
@@ -24,7 +24,7 @@ grab("https://prices.runescape.wiki/api/v1/osrs/mapping").then((data) => {
   });
 });
 */
-document.addEventListener("input", searchView.searchFunction);
+document.addEventListener('input', searchView.searchFunction);
 /*
 https://prices.runescape.wiki/api/v1/osrs/mapping
 Format

@@ -6,17 +6,17 @@ class model {
       return json;
     }
 
-    const list = document.querySelector(".item-cards");
+    const list = document.querySelector('.item-cards');
 
     // Ladet alle datensätze in karten
-    grab("https://prices.runescape.wiki/api/v1/osrs/mapping").then((data) => {
+    grab('https://prices.runescape.wiki/api/v1/osrs/mapping').then((data) => {
       data.forEach((item) => {
         const imgLink = `https://oldschool.runescape.wiki/images/${item.icon.replaceAll(
-          " ",
-          "_"
+          ' ',
+          '_'
         )}`;
         const e = list.insertAdjacentHTML(
-          "beforeend",
+          'beforeend',
           `
         <div class="card">
             <p class="name">${item.name}</p>
@@ -31,3 +31,5 @@ class model {
     });
   }
 }
+
+export default new model();

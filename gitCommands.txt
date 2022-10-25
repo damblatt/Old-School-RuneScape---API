@@ -1,0 +1,3 @@
+git commands:
+	git branch <branch_name>	// create a new branch
+	git checkout <branch_name>	// switch branch
