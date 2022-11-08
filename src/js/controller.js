@@ -1,17 +1,19 @@
 import model from './model.js';
 import searchView from './views/searchView.js';
-/*const list = document.querySelector(".item-cards");
+const list = document.querySelector('.item-cards');
 
 // Ladet alle datensätze in karten
-grab("https://prices.runescape.wiki/api/v1/osrs/mapping").then((data) => {
-  data.forEach((item) => {
-    const imgLink = `https://oldschool.runescape.wiki/images/${item.icon.replaceAll(
-      " ",
-      "_"
-    )}`;
-    const e = list.insertAdjacentHTML(
-      "beforeend",
-      `
+model
+  .loadCards('https://prices.runescape.wiki/api/v1/osrs/mapping')
+  .then((data) => {
+    data.forEach((item) => {
+      const imgLink = `https://oldschool.runescape.wiki/images/${item.icon.replaceAll(
+        ' ',
+        '_'
+      )}`;
+      const e = list.insertAdjacentHTML(
+        'beforeend',
+        `
         <div class="card">
             <p class="name">${item.name}</p>
             <div class="info">
@@ -20,11 +22,11 @@ grab("https://prices.runescape.wiki/api/v1/osrs/mapping").then((data) => {
             </div>
         </div>
         `
-    );
+      );
+    });
   });
-});
-*/
-document.addEventListener('input', searchView.searchFunction);
+
+// document.addEventListener('input', searchView.searchFunction);
 /*
 https://prices.runescape.wiki/api/v1/osrs/mapping
 Format
@@ -39,3 +41,7 @@ members: true
 name: "Zenyte necklace"
 value: 202000
 */
+
+const init = function () {
+  searchView.searchFunction();y
+};

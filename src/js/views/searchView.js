@@ -2,9 +2,9 @@ class searchView {
   // Suchfunktion (filterfunktion)
   searchFunction() {
     document
-      .querySelector(".search__field")
+      .querySelector(".searchField")
       .addEventListener("input", function () {
-        let query = document.querySelector(".search__field").value;
+        let query = document.querySelector(".searchField").value;
         const items = document.querySelectorAll(".name");
 
         // nur karten welche den suchbegriff beinhalten werden gerendert

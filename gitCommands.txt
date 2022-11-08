@@ -1,3 +1,5 @@
 git commands:
-	git branch <branch_name>	// create a new branch
-	git checkout <branch_name>	// switch branch
+	git remote add origin <link>   // add branch
+	git clone <link>   // clones the branch
+	git branch <branchName>   // create a new branch
+	git checkout <branchName>   // switch branch
