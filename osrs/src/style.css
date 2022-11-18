@@ -1,0 +1,130 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ----- Main ------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222;
+}
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+input {
+  font-size: 1rem;
+}
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #111;
+  border-radius: 0px;
+}
+/* ----- Karten ------------------------------ */
+
+.card {
+  box-shadow: 0 0 0 1px black, 0 0 0 2px #fff, 0 0 0 3px black;
+  background-color: #222;
+  padding: 0.5em;
+  margin-left: 0.75em;
+  margin: 1em 0em 1em 0.75em;
+  border-radius: 5px;
+}
+
+.card > .name {
+  color: #fff;
+  margin-bottom: 0.5em;
+}
+
+.card > .info .icon {
+  margin-bottom: auto;
+}
+
+.card > .info {
+  display: flex;
+}
+
+.card > .info > .examine {
+  margin-left: 0.5em;
+  color: gray;
+}
+
+.cardContent {
+  padding: 0.5em;
+  margin: 0.3em;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.cardContent > .name {
+  color: #fff;
+  margin-bottom: 0.5em;
+}
+
+.cardContent > .info .icon {
+  margin-bottom: auto;
+}
+
+.cardContent > .info {
+  display: flex;
+}
+
+.cardContent > .info > .examine {
+  margin-left: 0.5em;
+  color: gray;
+}
+
+.delete {
+  text-align: center;
+}
+
+.delete-button {
+  margin-left: auto;
+  padding: 5px 5px 5px 5px;
+}
+
+/* ----- searchView ------------------------------ */
+.searchField {
+  border-radius: 5px;
+  padding: 0.25em;
+}
+
+header {
+  padding: 1em;
+  margin: 0em;
+  box-shadow: 0 0 0 1px black, 0 0 0 2px #fff, 0 0 0 3px black;
+  background-color: #222;
+}
+
+/* ----- resultsView ------------------------------ */
+.searchResults {
+  height: 150vh;
+  list-style: none;
+  display: flex;
+  margin-top: 0.1em;
+  align-items: top;
+  min-width: 300px;
+  max-width: 500px;
+  overflow: scroll;
+}
+
+.searchResults::-webkit-scrollbar {
+  display: none;
+}
