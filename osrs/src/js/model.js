@@ -14,7 +14,7 @@ class model {
           ' ',
           '_'
         )}`;
-        const e = list.insertAdjacentHTML(
+        const cardList = list.insertAdjacentHTML(
           'beforeend',
           `
               <div class="card">
@@ -26,7 +26,7 @@ class model {
                   </div>
                 </div>
                 <div class="delete">
-                  <button class="delete-button">bruv</button>
+                  <button class="deleteButton">bruv</button>
                 </div>
               </div>
               `
@@ -51,6 +51,12 @@ class model {
           }
         });
       });
+
+    list.addEventListener("click", (e) => {
+      if (e.target.classList.contains("deleteButton")) {
+      e.target.parentElement.parentElement.remove();
+      }
+    });
   }
 }
 export default new model();
