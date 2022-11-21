@@ -44,7 +44,7 @@ class model {
         // nur karten welche den suchbegriff beinhalten werden gerendert
         items.forEach((i) => {
           if (!i.innerHTML.toLowerCase().includes(query.toLowerCase())) {
-            i.parentElement.style.display = 'none';
+            i.parentElement.parentElement.style.display = 'none';
           } else {
             i.innerHTML.indexOf;
             i.parentElement.style.display = 'inherit';

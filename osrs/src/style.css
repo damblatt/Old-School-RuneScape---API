@@ -123,6 +123,7 @@ header {
   min-width: 300px;
   max-width: 500px;
   overflow: scroll;
+  width: auto;
 }
 
 .searchResults::-webkit-scrollbar {
