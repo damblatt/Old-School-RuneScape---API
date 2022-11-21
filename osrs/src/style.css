@@ -44,7 +44,7 @@ input {
   background-color: #222;
   padding: 0.5em;
   margin-left: 0.75em;
-  margin: 1em 0em 1em 0.75em;
+  margin: 1em 1em 1em 0.75em;
   border-radius: 5px;
 }
 
@@ -123,7 +123,6 @@ header {
   min-width: 300px;
   max-width: 500px;
   overflow: scroll;
-  width: auto;
 }
 
 .searchResults::-webkit-scrollbar {
