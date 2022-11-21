@@ -13,6 +13,7 @@
 
 body {
   background-color: #222;
+  overflow-y: hidden;
 }
 
 .search-wrapper {
@@ -44,7 +45,7 @@ input {
   background-color: #222;
   padding: 0.5em;
   margin-left: 0.75em;
-  margin: 1em 1em 1em 0.75em;
+  margin: 1em 0em 1em 0.75em;
   border-radius: 5px;
 }
 
@@ -107,22 +108,41 @@ input {
 }
 
 header {
-  padding: 1em;
+  padding: 2.5vh;
   margin: 0em;
   box-shadow: 0 0 0 1px black, 0 0 0 2px #fff, 0 0 0 3px black;
   background-color: #222;
 }
 
+/* ----- addButton -------------------------------- */
+.newItemName {
+  border-radius: 5px;
+  padding: 0.25em;
+  margin-left: 100px;
+}
+
+.newItemDescription {
+  border-radius: 5px;
+  padding: 0.25em;
+}
+
+.addItemButton {
+  margin-left: auto;
+  padding: 5px 5px 5px 5px;
+}
+
+
 /* ----- resultsView ------------------------------ */
 .searchResults {
-  height: 150vh;
+  height: 89.5vh;
   list-style: none;
-  display: flex;
   margin-top: 0.1em;
+  padding-bottom: 1em;
   align-items: top;
   min-width: 300px;
   max-width: 500px;
   overflow: scroll;
+  padding-right: 6px;
 }
 
 .searchResults::-webkit-scrollbar {
