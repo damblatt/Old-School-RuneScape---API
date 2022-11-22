@@ -10,18 +10,22 @@
 
   <body>
     <div class="logo">
-      <img class="logoImage" src="src/img/osrs_logo.png" />
+      <input class="logoImage" type="image" src="src/img/osrs_logo.png" />
     </div>
     <header>
-      <input type="text" class="searchField" placeholder="Search" />
-      <div class="newItemField">
-        <input type="text" class="newItemName" placeholder="New item name" />
+      <div class="head">
         <input
           type="text"
-          class="newItemDescription"
-          placeholder="New item description"
+          class="searchField"
+          placeholder="Search"
+          onfocus="this.value=''"
         />
         <button class="buttonSettings addButton">Add item</button>
+        <input
+          class="bookmarkCollection"
+          type="image"
+          src="src/img/bookmark.png"
+        />
       </div>
     </header>
     <main>

@@ -24,6 +24,12 @@
   width: auto;
 }
 
+.bookmarkCollection  {
+  height: 36px;
+  width: auto;
+  vertical-align: bottom;
+}
+
 .buttonSettings {
   margin-left: auto;
   padding: 6px 5px 6px 5px;
@@ -133,6 +139,10 @@ input {
 }
 
 /* ----- searchView ------------------------------ */
+.head {
+  text-align: center;
+}
+
 .searchField {
   border-radius: 5px;
   padding: 0.25em;
