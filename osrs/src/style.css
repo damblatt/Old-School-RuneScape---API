@@ -11,6 +11,25 @@
   box-sizing: border-box;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.logoImage {
+  height: 10em;
+  width: auto;
+}
+
+.buttonSettings {
+  margin-left: auto;
+  padding: 6px 5px 6px 5px;
+  border-radius: 5px;
+}
+
 .searchResults {
   margin-left: 0.46em;
 }
@@ -43,13 +62,16 @@ input {
   border-radius: 0px;
 }
 /* ----- Karten ------------------------------ */
+.itemCards {
+  width: 50vw;
+  margin-bottom: 2em;
+}
 
 .card {
   box-shadow: 0 0 0 1px black, 0 0 0 2px #fff, 0 0 0 3px black;
   background-color: #222;
   padding: 0.5em;
-  margin-left: 0.75em;
-  margin: 1em 0em 1em 0.75em;
+  margin: 1em 0.75em 1em 0.75em;
   border-radius: 5px;
 }
 
@@ -96,19 +118,25 @@ input {
   color: gray;
 }
 
-.delete {
-  text-align: center;
+.deleteButton {
+  float: right;
 }
 
-.deleteButton {
-  margin-left: auto;
-  padding: 5px 5px 5px 5px;
+.changeButton {
+  float: inline-start;
+}
+
+.changeAndDeleteButtonSettings {
+  justify-content: center;
+  text-align: center;
+  margin-top: 1.25em;
 }
 
 /* ----- searchView ------------------------------ */
 .searchField {
   border-radius: 5px;
   padding: 0.25em;
+  width: 30em;
 }
 
 header {
@@ -119,10 +147,13 @@ header {
 }
 
 /* ----- addButton -------------------------------- */
+.newItemField {
+  float: right;
+}
+
 .newItemName {
   border-radius: 5px;
   padding: 0.25em;
-  margin-left: 100px;
 }
 
 .newItemDescription {
@@ -130,14 +161,16 @@ header {
   padding: 0.25em;
 }
 
-#addItemButton {
-  margin-left: auto;
-  padding: 5px 5px 5px 5px;
-}
-
 /* ----- resultsView ------------------------------ */
 .searchResults {
-  height: 89.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  overflow: scroll;
+  height: 500px;
+  margin-top: 10px;
+  /*
   list-style: none;
   margin-top: 0.1em;
   padding-bottom: 1em;
@@ -145,7 +178,7 @@ header {
   min-width: 300px;
   max-width: 500px;
   overflow: scroll;
-  padding-right: 6px;
+  padding-right: 6px;*/
 }
 
 .searchResults::-webkit-scrollbar {

@@ -14,7 +14,7 @@ class model {
           ' ',
           '_'
         )}`;
-        let cardList = list.insertAdjacentHTML(
+        list.insertAdjacentHTML(
           'beforeend',
           `
               <div class="card">
@@ -24,9 +24,8 @@ class model {
                       <img class="icon" src="${imgLink}">
                     <p class="examine">${item.examine}</p>
                   </div>
-                </div>
-                <div class="delete">
-                  <button class="deleteButton">Delete</button>
+                  <button class="deleteButton buttonSettings changeAndDeleteButtonSettings">Delete</button>
+                  <button class="changeButton buttonSettings changeAndDeleteButtonSettings">Change item data</button>
                 </div>
               </div>
               `
@@ -52,16 +51,45 @@ class model {
         });
       });
 
-    // Delete Button
+    // Change Button
+    function namePrompt(e) {
+      let name = prompt('Item name:');
+      if (name == null || name == '') {
+        console.log('Invalid name');
+      } else {
+        console.log(name);
+        descriptionPrompt(e, name);
+      }
+    }
+    function descriptionPrompt(e) {
+      let description = prompt('Item description:');
+      if (description == null || description == '') {
+        console.log('Invalid description');
+      } else {
+        console.log(description);
+        
+        console.log('Item changed');
+      }
+    }
     list.addEventListener('click', (e) => {
-      if (e.target.classList.contains('deleteButton')) {
-        console.log('lol');
-        e.target.parentElement.parentElement.remove();
+      if (e.target.classList.contains('changeButton')) {
+        namePrompt(e);
       }
     });
+
+    // Delete Button
+    function deleteCard(e) {
+      e.target.parentElement.parentElement.remove();
+    }
+    list.addEventListener('click', (e) => {
+      if (e.target.classList.contains('deleteButton')) {
+        console.log('Item removed');
+        deleteCard(e);
+      }
+    });
+
     // Add Button
-    addItemButton.addEventListener('click', function () {
-      console.log('lol');
+    document.querySelector('.addButton').addEventListener('click', function () {
       let itemName = document.querySelector('.newItemName').value;
       let itemDescription = document.querySelector('.newItemDescription').value;
       if (itemName && itemDescription) {
@@ -72,18 +100,17 @@ class model {
                 <div class="cardContent">
                   <p class="name">${itemName}</p>
                   <div class="info">
-                      
                     <p class="examine">${itemDescription}</p>
                   </div>
-                </div>
-                <div class="delete">
-                  <button class="deleteButton">Delete</button>
+                  <button class="deleteButton buttonSettings">Delete</button>
+                  <button class="changeButton buttonSettings">Change item data</button>
                 </div>
               </div>
               `
         );
+        console.log('Item added');
       } else {
-        console.log('false');
+        console.log('Item not added');
       }
     });
   }
