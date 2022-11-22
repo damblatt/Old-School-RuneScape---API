@@ -49,20 +49,27 @@ input {
   border-radius: 5px;
 }
 
-.card > .name {
+.name {
   color: #fff;
   margin-bottom: 0.5em;
 }
 
-.card > .info .icon {
-  margin-bottom: auto;
+.icon {
+  height: 100%;
+  float: left;
+  margin-right: 1.5em;
 }
 
 .card > .info {
   display: flex;
 }
 
-.card > .info > .examine {
+.card > .examine {
+  margin-left: 0.5em;
+  color: gray;
+}
+
+.card > .members {
   margin-left: 0.5em;
   color: gray;
 }
@@ -130,7 +137,6 @@ header {
   margin-left: auto;
   padding: 5px 5px 5px 5px;
 }
-
 
 /* ----- resultsView ------------------------------ */
 .searchResults {
