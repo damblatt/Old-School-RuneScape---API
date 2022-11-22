@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+.searchResults {
+  margin-left: 0.46em;
+}
+
 body {
   background-color: #222;
   overflow-y: hidden;
@@ -49,27 +53,20 @@ input {
   border-radius: 5px;
 }
 
-.name {
+.card > .name {
   color: #fff;
   margin-bottom: 0.5em;
 }
 
-.icon {
-  height: 100%;
-  float: left;
-  margin-right: 1.5em;
+.card > .info .icon {
+  margin-bottom: auto;
 }
 
 .card > .info {
   display: flex;
 }
 
-.card > .examine {
-  margin-left: 0.5em;
-  color: gray;
-}
-
-.card > .members {
+.card > .info > .examine {
   margin-left: 0.5em;
   color: gray;
 }
@@ -133,7 +130,7 @@ header {
   padding: 0.25em;
 }
 
-.addItemButton {
+#addItemButton {
   margin-left: auto;
   padding: 5px 5px 5px 5px;
 }

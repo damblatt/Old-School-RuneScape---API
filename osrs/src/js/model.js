@@ -14,16 +14,15 @@ class model {
           ' ',
           '_'
         )}`;
-        const cardList = list.insertAdjacentHTML(
+        let cardList = list.insertAdjacentHTML(
           'beforeend',
           `
               <div class="card">
                 <div class="cardContent">
-                  <img class="icon" src="${imgLink}">
                   <p class="name">${item.name}</p>
                   <div class="info">
+                      <img class="icon" src="${imgLink}">
                     <p class="examine">${item.examine}</p>
-                    <p class="members">${item.members}</p>
                   </div>
                 </div>
                 <div class="delete">
@@ -60,29 +59,32 @@ class model {
         e.target.parentElement.parentElement.remove();
       }
     });
-
     // Add Button
     addItemButton.addEventListener('click', function () {
       console.log('lol');
       let itemName = document.querySelector('.newItemName').value;
       let itemDescription = document.querySelector('.newItemDescription').value;
-      list.insertAdjacentHTML(
-        'beforeend',
-        `
-            <div class="card">
-              <div class="cardContent">
-                <p class="name">${itemName}</p>
-                <div class="info">
-                    
-                  <p class="examine">${itemDescription}</p>
+      if (itemName && itemDescription) {
+        list.insertAdjacentHTML(
+          'beforeend',
+          `
+              <div class="card">
+                <div class="cardContent">
+                  <p class="name">${itemName}</p>
+                  <div class="info">
+                      
+                    <p class="examine">${itemDescription}</p>
+                  </div>
+                </div>
+                <div class="delete">
+                  <button class="deleteButton">Delete</button>
                 </div>
               </div>
-              <div class="delete">
-                <button class="deleteButton">Delete</button>
-              </div>
-            </div>
-            `
-      );
+              `
+        );
+      } else {
+        console.log('false');
+      }
     });
   }
 }
