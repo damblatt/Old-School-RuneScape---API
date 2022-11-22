@@ -1,18 +1,48 @@
 /* Google Font Import - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* ----- Main ------------------------------ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding: 0;
   box-sizing: border-box;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.logoImage {
+  height: 10em;
+  width: auto;
+}
+
+.bookmarkCollection  {
+  height: 36px;
+  width: auto;
+  vertical-align: bottom;
+}
+
+.buttonSettings {
+  margin-left: auto;
+  padding: 6px 5px 6px 5px;
+  border-radius: 5px;
+}
+
+.searchResults {
+  margin-left: 0.46em;
+}
+
 body {
   background-color: #222;
+  overflow-y: hidden;
 }
 
 .search-wrapper {
@@ -38,12 +68,16 @@ input {
   border-radius: 0px;
 }
 /* ----- Karten ------------------------------ */
+.itemCards {
+  width: 50vw;
+  margin-bottom: 2em;
+}
 
 .card {
   box-shadow: 0 0 0 1px black, 0 0 0 2px #fff, 0 0 0 3px black;
   background-color: #222;
-  padding: 0.75em;
-  margin: 0.5em;
+  padding: 0.5em;
+  margin: 1em 0.75em 1em 0.75em;
   border-radius: 5px;
 }
 
@@ -65,33 +99,98 @@ input {
   color: gray;
 }
 
+.cardContent {
+  padding: 0.5em;
+  margin: 0.3em;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.cardContent > .name {
+  color: #fff;
+  margin-bottom: 0.5em;
+}
+
+.cardContent > .info .icon {
+  margin-bottom: auto;
+}
+
+.cardContent > .info {
+  display: flex;
+}
+
+.cardContent > .info > .examine {
+  margin-left: 0.5em;
+  color: gray;
+}
+
+.deleteButton {
+  float: right;
+}
+
+.changeButton {
+  float: inline-start;
+}
+
+.changeAndDeleteButtonSettings {
+  justify-content: center;
+  text-align: center;
+  margin-top: 1.25em;
+}
+
 /* ----- searchView ------------------------------ */
-.search__field {
+.head {
+  text-align: center;
+}
+
+.searchField {
   border-radius: 5px;
   padding: 0.25em;
+  width: 30em;
 }
 
 header {
-  padding: 1em;
+  padding: 2.5vh;
   margin: 0em;
   box-shadow: 0 0 0 1px black, 0 0 0 2px #fff, 0 0 0 3px black;
   background-color: #222;
 }
 
+/* ----- addButton -------------------------------- */
+.newItemField {
+  float: right;
+}
+
+.newItemName {
+  border-radius: 5px;
+  padding: 0.25em;
+}
+
+.newItemDescription {
+  border-radius: 5px;
+  padding: 0.25em;
+}
+
 /* ----- resultsView ------------------------------ */
-.search-results {
-  height: 150vh;
-  list-style: none;
+.searchResults {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  overflow: scroll;
+  height: 500px;
+  margin-top: 10px;
+  /*
+  list-style: none;
   margin-top: 0.1em;
+  padding-bottom: 1em;
   align-items: top;
   min-width: 300px;
   max-width: 500px;
   overflow: scroll;
+  padding-right: 6px;*/
 }
 
-.search-results::-webkit-scrollbar {
+.searchResults::-webkit-scrollbar {
   display: none;
 }
-
-
